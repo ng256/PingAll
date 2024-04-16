@@ -22,7 +22,7 @@ exit /B 0
 )
 :doPing
 	echo | set /P =%1 %ESC%[33m%2 %3 %ESC%[0m
-	ping -a -n 1 -w 200 %1 >nul 2>&1
+	ping -n 1 -w 200 %1 >nul 2>&1
 	if %errorlevel% equ 0 (
 		echo %ESC%[92m online %ESC%[0m
 	) else (
